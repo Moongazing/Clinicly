@@ -1,0 +1,9 @@
+﻿CREATE TABLE "Logs" (
+    "Id" SERIAL PRIMARY KEY,
+    "Message" TEXT,
+    "MessageTemplate" TEXT,
+    "Level" VARCHAR(128),
+    "TimeStamp" TIMESTAMP NOT NULL,
+    "Exception" TEXT,
+    "Properties" TEXT
+);
