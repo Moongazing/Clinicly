@@ -1,4 +1,6 @@
-﻿namespace Moongazing.Kernel.Security.JWT;
+﻿using Moongazing.Clinicly.Domain.Entities;
+
+namespace Moongazing.Kernel.Security.JWT;
 
 public interface ITokenHelper
 {

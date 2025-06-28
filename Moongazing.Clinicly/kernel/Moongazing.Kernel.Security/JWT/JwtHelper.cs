@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using Moongazing.Clinicly.Domain.Entities;
 using Moongazing.Kernel.Security.Encryption;
 using Moongazing.Kernel.Security.Extensions;
 using System.Collections.Immutable;
