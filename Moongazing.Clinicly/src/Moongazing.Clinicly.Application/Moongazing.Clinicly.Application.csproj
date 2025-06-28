@@ -6,4 +6,22 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Users\Dtos\" />
+    <Folder Include="Features\Users\Queries\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Carter" Version="9.0.0" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Application\Moongazing.Kernel.Application.csproj" />
+    <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Localization\Moongazing.Kernel.Localization.csproj" />
+    <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Persistence\Moongazing.Kernel.Persistence.csproj" />
+    <ProjectReference Include="..\Moongazing.Clinicly.Domain\Moongazing.Clinicly.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -10,7 +10,7 @@ public class UserEntity : Entity<Guid>
     public string Email { get; set; }
     public byte[] PasswordSalt { get; set; }
     public byte[] PasswordHash { get; set; }
-    public bool Status { get; set; }
+    public UserStatus Status { get; set; }
     public AuthenticatorType AuthenticatorType { get; set; }
 
     public virtual ICollection<UserOperationClaimEntity> UserOperationClaims { get; set; } = new HashSet<UserOperationClaimEntity>();
@@ -35,7 +35,7 @@ public class UserEntity : Entity<Guid>
         string email,
         byte[] passwordSalt,
         byte[] passwordHash,
-        bool status,
+        UserStatus status,
         AuthenticatorType authenticatorType
     )
     {
@@ -55,7 +55,7 @@ public class UserEntity : Entity<Guid>
         string email,
         byte[] passwordSalt,
         byte[] passwordHash,
-        bool status,
+        UserStatus status,
         AuthenticatorType authenticatorType
     )
         : base()
@@ -70,3 +70,4 @@ public class UserEntity : Entity<Guid>
         AuthenticatorType = authenticatorType;
     }
 }
+

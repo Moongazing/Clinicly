@@ -1,0 +1,6 @@
+  UserNotFound: "User not found."
+  PasswordMismatch: "Password mismatch."
+  EmailAlreadyExists: "Email already exists."
+  UserAlreadyExists: "User already exists."
+  UserNotActive : "User not active."
+  UserSuspended: "User suspended."
