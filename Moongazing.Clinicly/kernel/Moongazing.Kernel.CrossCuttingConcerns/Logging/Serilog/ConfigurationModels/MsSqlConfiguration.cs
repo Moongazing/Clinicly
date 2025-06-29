@@ -1,6 +1,6 @@
 ﻿namespace Moongazing.Kernel.CrossCuttingConcerns.Logging.Serilog.ConfigurationModels;
 
-public class PostgreSqlConfiguration
+public class MsSqlConfiguration
 {
     public string ConnectionString { get; set; } = default!;
     public string TableName { get; set; } = default!;

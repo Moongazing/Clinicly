@@ -12,7 +12,7 @@ public static class PersistenceServiceRegistrations
     public static IServiceCollection AddPersistenceServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContext<BaseDbContext>(options =>
-            options.UseNpgsql(
+            options.UseSqlServer(
                 configuration.GetConnectionString("CliniclyLocal"),
                 sqlOptions =>
                 {

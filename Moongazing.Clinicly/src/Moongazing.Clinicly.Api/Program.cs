@@ -28,7 +28,7 @@ builder.Services.Configure<RateLimitSettings>(
 builder.Services.AddMemoryCache();
 builder.Services.AddApplicationServices(
                      builder.Configuration.GetSection("MailSettings").Get<MailSettings>()!,
-                     builder.Configuration.GetSection("SeriLogConfigurations:PostgreSqlConfiguration").Get<PostgreSqlConfiguration>()!);
+                     builder.Configuration.GetSection("SeriLogConfigurations:MsSqlConfiguration").Get<MsSqlConfiguration>()!);
 
 builder.Services.AddHttpContextAccessor();
 

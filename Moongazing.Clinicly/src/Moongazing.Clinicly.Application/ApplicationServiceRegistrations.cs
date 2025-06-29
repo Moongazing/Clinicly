@@ -26,7 +26,7 @@ public static class ApplicationServiceRegistration
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services,
                                                             MailSettings mailSettings,
-                                                            PostgreSqlConfiguration loggerConfig
+                                                            MsSqlConfiguration loggerConfig
                                                             )
     {
         services.AddMapster();
@@ -45,7 +45,7 @@ public static class ApplicationServiceRegistration
 
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
-        services.AddSingleton<ILogger, LoggerServiceBase>(_ => new PostgreSqlLogger(loggerConfig));
+        services.AddSingleton<ILogger, LoggerServiceBase>(_ => new MsSqlLogger(loggerConfig));
         services.AddSingleton<IMailService, MailKitMailService>(_ => new MailKitMailService(mailSettings));
         services.AddScoped<ITokenHelper, JwtHelper>();
         services.AddScoped<IEmailAuthenticatorHelper, EmailAuthenticatorHelper>();
