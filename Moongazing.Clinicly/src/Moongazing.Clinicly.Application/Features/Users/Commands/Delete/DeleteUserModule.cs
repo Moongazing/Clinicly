@@ -17,7 +17,7 @@ public class DeleteUserModule : ICarterModule
             return Results.Ok(result);
         })
         .WithName("DeleteUser")
-        .WithTags("User")
+        .WithTags("Users")
         .Produces<DeleteUserResponse>(StatusCodes.Status200OK)
         .WithSummary("Delete a user by ID")
         .WithDescription("Soft deletes a user by ID.");

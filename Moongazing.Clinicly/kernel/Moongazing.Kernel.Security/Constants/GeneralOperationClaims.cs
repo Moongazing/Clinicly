@@ -8,5 +8,7 @@ public static class GeneralOperationClaims
     public const string Add = "general.add";    
     public const string Update = "general.update";
     public const string Delete = "general.delete";
+    public const string Doctor = "general.doctor";
+    public const string Patient = "general.patient";
 
 }

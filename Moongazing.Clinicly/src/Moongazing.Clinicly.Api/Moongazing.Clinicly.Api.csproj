@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -10,7 +10,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.6" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1-Preview.1" />
+    <PackageReference Include="Polly" Version="8.6.1" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.41" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Application\Moongazing.Kernel.Application.csproj" />
+    <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Localization\Moongazing.Kernel.Localization.csproj" />
+    <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Mailing\Moongazing.Kernel.Mailing.csproj" />
+    <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Persistence\Moongazing.Kernel.Persistence.csproj" />
+    <ProjectReference Include="..\Moongazing.Clinicly.Application\Moongazing.Clinicly.Application.csproj" />
+    <ProjectReference Include="..\Moongazing.Clinicly.Persistence\Moongazing.Clinicly.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

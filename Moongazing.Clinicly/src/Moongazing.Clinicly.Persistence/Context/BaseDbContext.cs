@@ -14,12 +14,7 @@ public class BaseDbContext: DbContext
 {
     protected IHttpContextAccessor HttpContextAccessor;
     protected IConfiguration Configuration { get; set; }
-    public virtual DbSet<UserEntity> User { get; set; }
-    public virtual DbSet<OperationClaimEntity> OperationClaim { get; set; }
-    public virtual DbSet<UserOperationClaimEntity> UserOperationClaim { get; set; }
-    public virtual DbSet<RefreshTokenEntity> RefreshToken { get; set; }
-    public virtual DbSet<EmailAuthenticatorEntity> EmailAuthenticator { get; set; }
-    public virtual DbSet<OtpAuthenticatorEntity> OtpAuthenticator { get; set; }
+    public virtual DbSet<UserEntity> Users { get; set; }
 
 
     public BaseDbContext(DbContextOptions<BaseDbContext> options,
