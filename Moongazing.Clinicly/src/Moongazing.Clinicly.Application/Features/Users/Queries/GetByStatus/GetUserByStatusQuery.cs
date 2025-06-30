@@ -23,7 +23,8 @@ public class GetUserByStatusQuery : IRequest<PaginatedResponse<GetUserByStatusRe
     ILoggableRequest,
     IIntervalRequest,
     ICachableRequest,
-    IRateLimitedRequest
+    IRateLimitedRequest,
+    ISecuredRequest
 {
     public UserStatus Status { get; set; } = default!;
     public string[] Roles => [GeneralOperationClaims.Read];
