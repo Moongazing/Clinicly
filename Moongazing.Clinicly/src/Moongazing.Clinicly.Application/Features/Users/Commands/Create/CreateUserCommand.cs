@@ -23,7 +23,6 @@ public class CreateUserCommand : IRequest<CreateUserResponse>,
     IIntervalRequest,
     ITransactionalRequest,
     ICacheRemoverRequest,
-    ISecuredRequest,
     IRateLimitedRequest
 {
     public string FirstName { get; set; } = default!;

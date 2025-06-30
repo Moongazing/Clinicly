@@ -7,10 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Users\Dtos\" />
     <Folder Include="Features\Users\Queries\GetList\" />
     <Folder Include="Features\Users\Queries\GetListByDynamic\" />
-    <Folder Include="Features\Users\Queries\GetById\" />
     <Folder Include="Features\Users\Queries\GetByStatus\" />
     <Folder Include="Services\" />
   </ItemGroup>
