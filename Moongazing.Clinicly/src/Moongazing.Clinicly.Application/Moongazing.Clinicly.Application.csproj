@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Users\Queries\GetListByDynamic\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
