@@ -5,7 +5,7 @@ namespace Moongazing.Clinicly.Domain.Entities;
 public class OperationClaimEntity : Entity<Guid>
 {
     public string Name { get; set; }
-    public virtual ICollection<UserOperationClaimEntity> UserOperationClaims { get; set; } = null!;
+    public virtual ICollection<UserOperationClaimEntity> UserOperationClaims { get; set; } = new HashSet<UserOperationClaimEntity>();
 
     public OperationClaimEntity()
     {
