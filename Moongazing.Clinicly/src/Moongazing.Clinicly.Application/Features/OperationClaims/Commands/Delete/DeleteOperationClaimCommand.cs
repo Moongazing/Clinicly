@@ -12,9 +12,9 @@ using Moongazing.Kernel.Application.Pipelines.RateLimiting;
 using Moongazing.Kernel.Application.Pipelines.Transaction;
 using Moongazing.Kernel.Security.Constants;
 
-namespace Moongazing.Clinicly.Application.Features.OperationClaims.Commands.Create;
+namespace Moongazing.Clinicly.Application.Features.OperationClaims.Commands.Delete;
 
-public class CreateOperationClaimCommand : IRequest<CreateOperationClaimResponse>,
+public class DeleteOperationClaimCommand : IRequest<DeleteOperationClaimResponse>,
     ILoggableRequest,
     IIntervalRequest,
     ITransactionalRequest,
@@ -22,41 +22,37 @@ public class CreateOperationClaimCommand : IRequest<CreateOperationClaimResponse
     IRateLimitedRequest,
     ISecuredRequest
 {
-
-    public string Name { get; set; } = default!;
-    public string[] Roles => [GeneralOperationClaims.Add, GeneralOperationClaims.Write];
+    public Guid Id { get; set; }
+    public string[] Roles => [GeneralOperationClaims.Delete, GeneralOperationClaims.Write];
     public bool BypassCache { get; }
     public string? CacheGroupKey => OperationClaimMessages.SectionName;
     public string? CacheKey => null;
     public int Interval => 15;
 
-
-    public class CreateOperationClaimCommandHandler : IRequestHandler<CreateOperationClaimCommand, CreateOperationClaimResponse>
+    public class DeleteOperationClaimCommandHandler : IRequestHandler<DeleteOperationClaimCommand, DeleteOperationClaimResponse>
     {
         private readonly IOperationClaimRepository operationClaimRepository;
         private readonly OperationClaimBusinessRules operationClaimBusinessRules;
-        public CreateOperationClaimCommandHandler(IOperationClaimRepository operationClaimRepository,
+        public DeleteOperationClaimCommandHandler(IOperationClaimRepository operationClaimRepository,
                                                   OperationClaimBusinessRules operationClaimBusinessRules)
         {
             this.operationClaimRepository = operationClaimRepository;
             this.operationClaimBusinessRules = operationClaimBusinessRules;
         }
-        public async Task<CreateOperationClaimResponse> Handle(CreateOperationClaimCommand request, CancellationToken cancellationToken)
+        public async Task<DeleteOperationClaimResponse> Handle(DeleteOperationClaimCommand request, CancellationToken cancellationToken)
         {
-            await operationClaimBusinessRules.OperationClaimNameShouldNotExists(request.Name);
 
-            OperationClaimEntity operationClaim = request.Adapt<OperationClaimEntity>();
+            OperationClaimEntity? operationClaim = await operationClaimRepository.GetAsync(predicate: x => x.Id == request.Id,
+                                                                                           withDeleted: false,
+                                                                                           cancellationToken: cancellationToken);
+            await operationClaimBusinessRules.OperationClaimShouldBeExistsWhenSelected(operationClaim);
 
-            operationClaim.Id = Guid.NewGuid();
+            await operationClaimRepository.DeleteAsync(operationClaim!, true, cancellationToken);
 
-            OperationClaimEntity? createdOperationClaim = await operationClaimRepository.AddAsync(operationClaim, cancellationToken);
-
-            CreateOperationClaimResponse response = createdOperationClaim.Adapt<CreateOperationClaimResponse>();
+            DeleteOperationClaimResponse response = operationClaim.Adapt<DeleteOperationClaimResponse>();
 
             return response;
-
-
-
         }
     }
 }
+
