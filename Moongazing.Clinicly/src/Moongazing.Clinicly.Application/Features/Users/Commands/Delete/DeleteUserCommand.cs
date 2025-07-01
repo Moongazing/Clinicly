@@ -1,11 +1,9 @@
 ﻿using Mapster;
 using MediatR;
-using Moongazing.Clinicly.Application.Features.Users.Commands.Create;
 using Moongazing.Clinicly.Application.Features.Users.Constants;
 using Moongazing.Clinicly.Application.Features.Users.Rules;
 using Moongazing.Clinicly.Application.Repositories;
 using Moongazing.Clinicly.Domain.Entities;
-using Moongazing.Clinicly.Domain.Enums;
 using Moongazing.Kernel.Application.Pipelines.Authorization;
 using Moongazing.Kernel.Application.Pipelines.Caching;
 using Moongazing.Kernel.Application.Pipelines.Logging;
@@ -13,11 +11,6 @@ using Moongazing.Kernel.Application.Pipelines.Performance;
 using Moongazing.Kernel.Application.Pipelines.RateLimiting;
 using Moongazing.Kernel.Application.Pipelines.Transaction;
 using Moongazing.Kernel.Security.Constants;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Moongazing.Clinicly.Application.Features.Users.Commands.Delete;
 

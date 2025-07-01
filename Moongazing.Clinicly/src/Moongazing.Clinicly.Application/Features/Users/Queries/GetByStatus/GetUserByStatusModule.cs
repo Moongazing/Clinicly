@@ -3,7 +3,6 @@ using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
-using Moongazing.Clinicly.Application.Features.Users.Queries.GetByEmail;
 
 namespace Moongazing.Clinicly.Application.Features.Users.Queries.GetByStatus;
 

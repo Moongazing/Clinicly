@@ -1,12 +1,10 @@
 ﻿using Mapster;
-using MapsterMapper;
 using MediatR;
 using Moongazing.Clinicly.Application.Features.Users.Constants;
 using Moongazing.Clinicly.Application.Features.Users.Rules;
 using Moongazing.Clinicly.Application.Repositories;
 using Moongazing.Clinicly.Domain.Entities;
 using Moongazing.Clinicly.Domain.Enums;
-using Moongazing.Kernel.Application.Pipelines.Authorization;
 using Moongazing.Kernel.Application.Pipelines.Caching;
 using Moongazing.Kernel.Application.Pipelines.Logging;
 using Moongazing.Kernel.Application.Pipelines.Performance;

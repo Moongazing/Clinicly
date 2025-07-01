@@ -15,7 +15,6 @@ using Moongazing.Kernel.Persistence.MigrationApplier;
 using Polly;
 using StackExchange.Redis;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using System.Text.Json.Serialization;
 using TokenOptions = Moongazing.Kernel.Security.JWT.TokenOptions;
 
 
