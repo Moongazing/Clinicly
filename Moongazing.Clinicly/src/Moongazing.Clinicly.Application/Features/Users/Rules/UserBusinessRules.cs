@@ -34,7 +34,7 @@ public class UserBusinessRules : BaseBusinessRules
         }
     }
 
-    public async Task UserShouldNotSuspend(UserEntity? user)
+    public async Task UserShouldNotSuspended(UserEntity? user)
     {
         if (user!.Status == Domain.Enums.UserStatus.Suspended)
         {

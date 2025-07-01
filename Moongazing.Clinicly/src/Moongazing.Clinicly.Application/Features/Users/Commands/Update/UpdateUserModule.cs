@@ -18,7 +18,6 @@ public class UpdateUserModule : ICarterModule
         .WithName("UpdateUser")
         .WithTags("Users")
         .Produces<UpdateUserResponse>(StatusCodes.Status200OK)
-        .ProducesValidationProblem()
         .WithSummary("Update an existing user")
         .WithDescription("Updates user fields including hashed password.");
     }

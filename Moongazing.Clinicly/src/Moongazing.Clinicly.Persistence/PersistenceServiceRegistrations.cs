@@ -18,7 +18,9 @@ public static class PersistenceServiceRegistrations
                 {
                     sqlOptions.CommandTimeout(360);
                 }));
+
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IOperationClaimRepository, OperationClaimRepository>();
 
         return services;
 

@@ -20,7 +20,6 @@ public class CreateUserModule : ICarterModule
         .WithName("CreateUser")
         .WithTags("Users")
         .Produces<CreateUserResponse>(StatusCodes.Status201Created)
-        .ProducesValidationProblem()
         .WithSummary("Create a new user")
         .WithDescription("Creates a user in the system with hashed password.");
     }

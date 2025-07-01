@@ -17,7 +17,6 @@ public class BaseDbContext: DbContext
     public virtual DbSet<EmailAuthenticatorEntity> EmailAuthenticators { get; set; }
     public virtual DbSet<OtpAuthenticatorEntity> OtpAuthenticators { get; set; }
 
-
     public BaseDbContext(DbContextOptions<BaseDbContext> options,
                          IConfiguration configuration,
                          IHttpContextAccessor httpContextAccessor) : base(options)

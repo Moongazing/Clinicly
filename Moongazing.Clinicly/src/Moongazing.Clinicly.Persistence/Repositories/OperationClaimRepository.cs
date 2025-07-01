@@ -5,9 +5,9 @@ using Moongazing.Kernel.Persistence.Repositories;
 
 namespace Moongazing.Clinicly.Persistence.Repositories;
 
-public class UserRepository : EfRepositoryBase<UserEntity, Guid, BaseDbContext>, IUserRepository
+public class OperationClaimRepository : EfRepositoryBase<OperationClaimEntity, Guid, BaseDbContext>, IOperationClaimRepository
 {
-    public UserRepository(BaseDbContext context) : base(context)
+    public OperationClaimRepository(BaseDbContext context) : base(context)
     {
     }
 }

@@ -5,6 +5,7 @@ using Moongazing.Clinicly.Application.Features.Users.Rules;
 using Moongazing.Clinicly.Application.Repositories;
 using Moongazing.Clinicly.Domain.Entities;
 using Moongazing.Clinicly.Domain.Enums;
+using Moongazing.Kernel.Application.Pipelines.Authorization;
 using Moongazing.Kernel.Application.Pipelines.Caching;
 using Moongazing.Kernel.Application.Pipelines.Logging;
 using Moongazing.Kernel.Application.Pipelines.Performance;
@@ -21,10 +22,11 @@ public class CreateUserCommand : IRequest<CreateUserResponse>,
     IIntervalRequest,
     ITransactionalRequest,
     ICacheRemoverRequest,
-    IRateLimitedRequest
+    IRateLimitedRequest,
+    ISecuredRequest
 {
     public string FirstName { get; set; } = default!;
-    public string LastName { get; set; }  = default!;
+    public string LastName { get; set; } = default!;
     public string Email { get; set; } = default!;
     public string Password { get; set; } = default!;
     public UserStatus Status { get; set; } = default!;
