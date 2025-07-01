@@ -45,6 +45,7 @@ public class DeleteOperationClaimCommand : IRequest<DeleteOperationClaimResponse
             OperationClaimEntity? operationClaim = await operationClaimRepository.GetAsync(predicate: x => x.Id == request.Id,
                                                                                            withDeleted: false,
                                                                                            cancellationToken: cancellationToken);
+
             await operationClaimBusinessRules.OperationClaimShouldBeExistsWhenSelected(operationClaim);
 
             await operationClaimRepository.DeleteAsync(operationClaim!, true, cancellationToken);
