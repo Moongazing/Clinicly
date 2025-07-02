@@ -10,7 +10,7 @@ public class GetOperationClaimByNameModule : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/api/clinicly/operation-claim/by-name", async ([AsParameters] GetOperationClaimByNameQuery request, ISender sender, CancellationToken cancellationToken) =>
+        app.MapGet("/api/clinicly/operation-claims/by-name", async ([AsParameters] GetOperationClaimByNameQuery request, ISender sender, CancellationToken cancellationToken) =>
         {
             var query = new GetOperationClaimByNameQuery { Name = request.Name };
             var result = await sender.Send(query, cancellationToken);
