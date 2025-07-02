@@ -16,7 +16,10 @@ using Moongazing.Kernel.Security.Constants;
 namespace Moongazing.Clinicly.Application.Features.Users.Queries.GetListByDynamic;
 
 public class GetUserListByDynamicQuery : IRequest<PaginatedResponse<GetUserListByDynamicResponse>>,
-    ILoggableRequest, ISecuredRequest, IIntervalRequest, IRateLimitedRequest
+    ILoggableRequest,
+    ISecuredRequest,
+    IIntervalRequest, 
+    IRateLimitedRequest
 {
     public DynamicQuery DynamicQuery { get; set; } = default!;
     public PageRequest PageRequest { get; set; } = default!;

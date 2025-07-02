@@ -11,11 +11,6 @@ using Moongazing.Kernel.Application.Pipelines.Performance;
 using Moongazing.Kernel.Application.Pipelines.RateLimiting;
 using Moongazing.Kernel.Application.Pipelines.Transaction;
 using Moongazing.Kernel.Security.Constants;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Moongazing.Clinicly.Application.Features.OperationClaims.Commands.Update;
 

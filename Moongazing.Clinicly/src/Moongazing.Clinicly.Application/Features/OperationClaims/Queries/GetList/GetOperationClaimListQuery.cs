@@ -1,8 +1,6 @@
 ﻿using Mapster;
 using MediatR;
 using Moongazing.Clinicly.Application.Features.OperationClaims.Constants;
-using Moongazing.Clinicly.Application.Features.Users.Constants;
-using Moongazing.Clinicly.Application.Features.Users.Queries.GetList;
 using Moongazing.Clinicly.Application.Repositories;
 using Moongazing.Clinicly.Domain.Entities;
 using Moongazing.Kernel.Application.Pipelines.Authorization;
@@ -14,11 +12,6 @@ using Moongazing.Kernel.Application.Requests;
 using Moongazing.Kernel.Application.Responses;
 using Moongazing.Kernel.Persistence.Paging;
 using Moongazing.Kernel.Security.Constants;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Moongazing.Clinicly.Application.Features.OperationClaims.Queries.GetList;
 

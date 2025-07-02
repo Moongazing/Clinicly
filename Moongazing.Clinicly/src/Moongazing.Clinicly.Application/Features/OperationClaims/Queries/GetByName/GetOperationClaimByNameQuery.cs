@@ -1,7 +1,6 @@
 ﻿using Mapster;
 using MediatR;
 using Moongazing.Clinicly.Application.Features.OperationClaims.Constants;
-using Moongazing.Clinicly.Application.Features.OperationClaims.Queries.GetById;
 using Moongazing.Clinicly.Application.Features.OperationClaims.Rules;
 using Moongazing.Clinicly.Application.Repositories;
 using Moongazing.Clinicly.Domain.Entities;
