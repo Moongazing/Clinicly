@@ -21,6 +21,7 @@ public static class PersistenceServiceRegistrations
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IOperationClaimRepository, OperationClaimRepository>();
+        services.AddScoped<IUserOperationClaimRepository, UserOperationClaimRepository>();
 
         return services;
 

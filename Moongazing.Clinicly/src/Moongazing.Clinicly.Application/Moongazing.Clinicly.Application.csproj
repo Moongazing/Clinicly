@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Identity\" />
-    <Folder Include="Features\UserOperationClaims\Commands\Create\" />
     <Folder Include="Features\UserOperationClaims\Commands\Delete\" />
     <Folder Include="Features\UserOperationClaims\Commands\Update\" />
     <Folder Include="Features\UserOperationClaims\Queries\GetById\" />

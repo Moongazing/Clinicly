@@ -49,4 +49,5 @@ public class UserOperationClaimBusinessRules : BaseBusinessRules
             await LocalizedBusinessException(UserOperationClaimsMessages.UserOperationClaimAlreadyExists);
         }
     }
+
 }
