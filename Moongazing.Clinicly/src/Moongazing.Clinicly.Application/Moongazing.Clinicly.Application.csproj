@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Identity\" />
+    <Folder Include="Features\UserOperationClaims\Commands\Create\" />
+    <Folder Include="Features\UserOperationClaims\Commands\Delete\" />
+    <Folder Include="Features\UserOperationClaims\Commands\Update\" />
+    <Folder Include="Features\UserOperationClaims\Queries\GetById\" />
+    <Folder Include="Features\UserOperationClaims\Queries\GetByUserId\" />
+    <Folder Include="Features\UserOperationClaims\Queries\GetList\" />
+    <Folder Include="Features\UserOperationClaims\Queries\GetListByDynamic\" />
+    <Folder Include="Features\UserOperationClaims\Queries\GetByOperationClaim\" />
+    <Folder Include="Features\UserOperationClaims\Resources\Locales\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
