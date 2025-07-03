@@ -5,7 +5,6 @@ using Moongazing.Clinicly.Application.Features.UserOperationClaims.Constants;
 using Moongazing.Clinicly.Application.Features.UserOperationClaims.Rules;
 using Moongazing.Clinicly.Application.Features.Users.Rules;
 using Moongazing.Clinicly.Application.Repositories;
-using Moongazing.Clinicly.Domain.Entities;
 using Moongazing.Kernel.Application.Pipelines.Authorization;
 using Moongazing.Kernel.Application.Pipelines.Caching;
 using Moongazing.Kernel.Application.Pipelines.Logging;

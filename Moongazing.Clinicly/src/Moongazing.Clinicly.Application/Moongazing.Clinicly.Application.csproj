@@ -8,11 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Features\Identity\" />
-    <Folder Include="Features\UserOperationClaims\Queries\GetById\" />
     <Folder Include="Features\UserOperationClaims\Queries\GetByUserId\" />
     <Folder Include="Features\UserOperationClaims\Queries\GetList\" />
     <Folder Include="Features\UserOperationClaims\Queries\GetListByDynamic\" />
-    <Folder Include="Features\UserOperationClaims\Queries\GetByOperationClaim\" />
+    <Folder Include="Features\UserOperationClaims\Queries\GetByOperationClaimId\" />
     <Folder Include="Features\UserOperationClaims\Resources\Locales\" />
     <Folder Include="Services\" />
   </ItemGroup>
