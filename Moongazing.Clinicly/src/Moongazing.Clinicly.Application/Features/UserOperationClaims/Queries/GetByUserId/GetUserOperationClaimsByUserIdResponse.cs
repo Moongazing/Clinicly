@@ -1,4 +1,4 @@
-﻿namespace Moongazing.Clinicly.Application.Features.UserOperationClaims.Queries.GetByOperationClaimId;
+﻿namespace Moongazing.Clinicly.Application.Features.UserOperationClaims.Queries.GetByUserId;
 
 public class GetUserOperationClaimsByUserIdResponse
 {

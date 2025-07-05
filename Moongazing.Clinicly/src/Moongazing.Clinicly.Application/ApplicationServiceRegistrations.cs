@@ -1,7 +1,9 @@
 ﻿using FluentValidation;
 using Mapster;
 using Microsoft.Extensions.DependencyInjection;
+using Moongazing.Clinicly.Application.Services.Authenticator;
 using Moongazing.Clinicly.Application.Services.Identity;
+using Moongazing.Clinicly.Application.Services.User;
 using Moongazing.Kernel.Application.Pipelines.Authorization;
 using Moongazing.Kernel.Application.Pipelines.Caching;
 using Moongazing.Kernel.Application.Pipelines.Logging;
@@ -27,8 +29,7 @@ public static class ApplicationServiceRegistration
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services,
                                                             MailSettings mailSettings,
-                                                            MsSqlConfiguration loggerConfig
-                                                            )
+                                                            MsSqlConfiguration loggerConfig)
     {
         services.AddMapster();
         services.AddMediatR(configuration =>
@@ -52,6 +53,8 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IEmailAuthenticatorHelper, EmailAuthenticatorHelper>();
         services.AddScoped<IOtpAuthenticatorHelper, OtpNetOtpAuthenticatorHelper>();
         services.AddScoped<IIdentityService, IdentityService>();
+        services.AddScoped<IAuthenticatorService, AuthenticatorService>();
+        services.AddScoped<IUserService, UserService>();
 
 
 

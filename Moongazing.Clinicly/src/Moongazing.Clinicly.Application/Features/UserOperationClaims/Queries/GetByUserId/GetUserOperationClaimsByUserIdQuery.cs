@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Moongazing.Clinicly.Application.Features.UserOperationClaims.Constants;
-using Moongazing.Clinicly.Application.Features.UserOperationClaims.Queries.GetByOperationClaimId;
 using Moongazing.Clinicly.Application.Repositories;
 using Moongazing.Kernel.Application.Pipelines.Authorization;
 using Moongazing.Kernel.Application.Pipelines.Caching;
