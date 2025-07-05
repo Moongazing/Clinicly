@@ -5,4 +5,5 @@ namespace Moongazing.Clinicly.Application.Repositories;
 
 public interface IUserOperationClaimRepository : IAsyncRepository<UserOperationClaimEntity, Guid>, IRepository<UserOperationClaimEntity, Guid>
 {
+    Task<IList<OperationClaimEntity>> GetOperationClaimsByUserIdAsync(Guid userId);
 }

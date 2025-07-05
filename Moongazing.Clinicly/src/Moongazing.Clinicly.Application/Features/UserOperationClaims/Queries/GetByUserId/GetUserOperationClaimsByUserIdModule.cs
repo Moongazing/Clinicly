@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
-using Moongazing.Clinicly.Application.Features.UserOperationClaims.Queries.GetByClaimId;
 using Moongazing.Clinicly.Application.Features.UserOperationClaims.Queries.GetByOperationClaimId;
 using Moongazing.Kernel.Application.Requests;
 using Moongazing.Kernel.Application.Responses;

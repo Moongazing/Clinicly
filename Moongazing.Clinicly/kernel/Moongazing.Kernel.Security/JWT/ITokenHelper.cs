@@ -4,6 +4,6 @@ namespace Moongazing.Kernel.Security.JWT;
 
 public interface ITokenHelper
 {
-    AccessToken CreateToken(UserEntity user, IList<OperationClaimEntity> operationClaims, string cd_vbCassa);
+    AccessToken CreateToken(UserEntity user, IList<OperationClaimEntity> operationClaims);
     RefreshTokenEntity CreateRefreshToken(UserEntity user, string ipAddress);
 }

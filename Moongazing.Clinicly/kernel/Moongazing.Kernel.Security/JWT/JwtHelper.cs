@@ -24,7 +24,7 @@ public class JwtHelper : ITokenHelper
             Configuration.GetSection(configurationSection).Get<TokenOptions>()
             ?? throw new NullReferenceException($"\"{configurationSection}\" {"section cannot found in configuration"}");
     }
-    public AccessToken CreateToken(UserEntity user, IList<OperationClaimEntity> operationClaims, string cd_vbCassa)
+    public AccessToken CreateToken(UserEntity user, IList<OperationClaimEntity> operationClaims)
     {
         accessTokenExpiration = DateTime.Now.AddMinutes(tokenOptions.AccessTokenExpiration);
         SecurityKey securityKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey);

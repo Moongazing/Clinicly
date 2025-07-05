@@ -5,11 +5,9 @@ using Moongazing.Kernel.Persistence.Repositories;
 
 namespace Moongazing.Clinicly.Persistence.Repositories;
 
-public class OperationClaimRepository : EfRepositoryBase<OperationClaimEntity, Guid, BaseDbContext>, IOperationClaimRepository
+public class OtpAuthenticatorRepository : EfRepositoryBase<OtpAuthenticatorEntity, Guid, BaseDbContext>, IOtpAuthenticatorRepository
 {
-    public OperationClaimRepository(BaseDbContext context) : base(context)
+    public OtpAuthenticatorRepository(BaseDbContext context) : base(context)
     {
     }
-
-
 }
