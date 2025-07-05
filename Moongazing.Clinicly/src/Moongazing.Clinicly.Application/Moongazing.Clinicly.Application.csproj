@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Identity\" />
+    <Folder Include="Features\Identity\Login\" />
+    <Folder Include="Features\Identity\EnableEmailAuthenticator\" />
+    <Folder Include="Features\Identity\EnableOtpAuthenticator\" />
+    <Folder Include="Features\Identity\VerifyOtpAuthenticator\" />
+    <Folder Include="Features\Identity\VerifyEmailAuthenticator\" />
+    <Folder Include="Features\Identity\RevokeToken\" />
+    <Folder Include="Features\Identity\RefreshToken\" />
+    <Folder Include="Features\Identity\Register\" />
     <Folder Include="Features\UserOperationClaims\Queries\GetList\" />
     <Folder Include="Features\UserOperationClaims\Queries\GetListByDynamic\" />
     <Folder Include="Features\UserOperationClaims\Resources\Locales\" />
