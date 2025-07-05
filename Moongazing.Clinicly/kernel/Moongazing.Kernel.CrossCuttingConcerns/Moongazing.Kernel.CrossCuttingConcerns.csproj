@@ -7,8 +7,9 @@
   </PropertyGroup>
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="OrionGuard" Version="3.0.0" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
-    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="8.2.0" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="8.2.1" />
   </ItemGroup>
 
 </Project>

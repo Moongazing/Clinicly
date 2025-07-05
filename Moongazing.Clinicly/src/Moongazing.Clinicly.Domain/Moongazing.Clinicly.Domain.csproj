@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OrionGuard" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\kernel\Moongazing.Kernel.Persistence\Moongazing.Kernel.Persistence.csproj" />
   </ItemGroup>
 
